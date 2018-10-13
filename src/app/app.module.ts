@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NotesListComponent } from './notes-list/notes-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotesListComponent
   ],
   imports: [
     BrowserModule, NgbModule

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class="table table-borderless">
+    <thead class="thead-dark">
+    <tr>
+      <th class="text-center">Notes</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let note of notes">
+    <tr>
+      <td class="text-center font-weight-bold text-light">
+        <div [ngClass]="{'bg-success': note.isPositive, 'bg-danger': !note.isPositive}" class="container-fluid card-body">
+          {{note.message}}
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

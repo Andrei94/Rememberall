@@ -1,4 +1,4 @@
-import { AppPage } from './app.po';
+import {AppPage} from './app.po';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,7 +8,9 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to Rememberall!');
+    AppPage.navigateTo();
+    expect(AppPage.getTableText()).toBe('Notes\n' +
+      'Rejected Pdf CISM that embarrassed the team. Saved the honor of the bit team\n' +
+      'Ran a jenkins command without sending an email about it');
   });
 });
