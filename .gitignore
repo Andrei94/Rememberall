@@ -10,6 +10,7 @@
 
 # IDEs and editors
 /.idea
+*.iml
 .project
 .classpath
 .c9/
@@ -30,6 +31,7 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+package-lock.json
 yarn-error.log
 testem.log
 /typings
