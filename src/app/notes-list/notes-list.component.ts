@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Note} from './note';
+import {NotesListService} from './notes-service/notes-list.service';
 
 @Component({
   selector: 'app-notes-list',
@@ -9,22 +10,10 @@ import {Note} from './note';
 export class NotesListComponent implements OnInit {
   notes: Note[];
 
-  constructor() {
+  constructor(private notesService: NotesListService) {
   }
 
   ngOnInit() {
-    this.notes = [new Note('Rejected Pdf CISM that embarrassed the team. Saved the honor of the bit team', true),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note(Math.random().toString(36).substring(7), Math.floor(Math.random() * 100) % 2 === 0),
-      new Note('Ran a jenkins command without sending an email about it', false)];
+    this.notesService.getNotes().subscribe(notes => this.notes = notes);
   }
-
 }
