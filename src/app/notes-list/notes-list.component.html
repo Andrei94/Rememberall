@@ -1,19 +1,17 @@
 <div class="container-fluid">
-  <table class="table table-borderless">
-    <thead class="bg-dark text-light fixed-top">
-    <tr>
-      <th class="text-center">Notes</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="padding-top: 50px; display: block"></tr>
-    <tr *ngFor="let note of notes">
-      <td class="text-center font-weight-bold text-light">
-        <div [ngClass]="{'bg-success': note.isPositive, 'bg-danger': !note.isPositive}" class="container-fluid card-body">
-          {{note.message}}
-        </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+  <div>
+    <table class="table table-borderless">
+      <thead class="bg-dark text-light">
+      </thead>
+      <tbody>
+      <tr *ngFor="let note of notes">
+        <td class="text-center font-weight-bold text-light">
+          <div [ngClass]="{'bg-success': note.isPositive, 'bg-danger': !note.isPositive}" class="container-fluid card-body">
+            {{note.message}}
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
