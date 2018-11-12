@@ -9,8 +9,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     AppPage.navigateTo();
-    expect(AppPage.getTableText()).toBe('Notes\n' +
-      'Rejected Pdf CISM that embarrassed the team. Saved the honor of the bit team\n' +
+    expect(AppPage.getTableText()).toBe('Rejected Pdf CISM that embarrassed the team. Saved the honor of the bit team\n' +
       'Ran a jenkins command without sending an email about it');
   });
 });
