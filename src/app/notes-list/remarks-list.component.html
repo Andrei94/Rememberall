@@ -4,10 +4,10 @@
       <thead class="bg-dark text-light">
       </thead>
       <tbody>
-      <tr *ngFor="let note of notes">
+      <tr *ngFor="let remark of remarks">
         <td class="text-center font-weight-bold text-light">
-          <div [ngClass]="{'bg-success': note.isPositive, 'bg-danger': !note.isPositive}" class="container-fluid card-body">
-            {{note.message}}
+          <div [ngClass]="{'bg-success': remark.quality === 'positive', 'bg-danger': remark.quality === 'negative'}" class="container-fluid card-body">
+            {{remark.description}}
           </div>
         </td>
       </tr>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotesListComponent } from './notes-list.component';
+import { RemarksListComponent } from './remarks-list.component';
 
-describe('NotesListComponent', () => {
-  let component: NotesListComponent;
-  let fixture: ComponentFixture<NotesListComponent>;
+describe('RemarksListComponent', () => {
+  let component: RemarksListComponent;
+  let fixture: ComponentFixture<RemarksListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotesListComponent ]
+      declarations: [ RemarksListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotesListComponent);
+    fixture = TestBed.createComponent(RemarksListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,6 +23,6 @@ describe('NotesListComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should output 2 elements', () => {
-    expect(component.notes.length).toBe(2);
+    expect(component.remarks.length).toBe(2);
   });
 });
