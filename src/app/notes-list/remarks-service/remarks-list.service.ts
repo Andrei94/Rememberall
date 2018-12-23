@@ -16,7 +16,7 @@ export class RemarksListService {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
-    return this.http.get('http://localhost:8080/allRemarks', httpOptions)
+    return this.http.get('http://ec2-3-83-24-127.compute-1.amazonaws.com/allRemarks', httpOptions)
       .pipe(map((r: any) => r.remarks as Remark[]));
   }
 }
