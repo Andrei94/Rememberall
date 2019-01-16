@@ -6,7 +6,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MockAppNotesListComponent
+        MockAppRemarksListComponent
       ],
     }).compileComponents();
   }));
@@ -23,8 +23,8 @@ describe('AppComponent', () => {
 });
 
 @Component({
-  selector: 'app-notes-list',
+  selector: 'app-remarks-list',
   template: ''
 })
-class MockAppNotesListComponent {
+class MockAppRemarksListComponent {
 }

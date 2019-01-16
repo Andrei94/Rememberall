@@ -3,17 +3,17 @@ import {Remark} from './remark';
 import {RemarksListService} from './remarks-service/remarks-list.service';
 
 @Component({
-  selector: 'app-notes-list',
+  selector: 'app-remarks-list',
   templateUrl: './remarks-list.component.html',
   styleUrls: ['./remarks-list.component.css']
 })
 export class RemarksListComponent implements OnInit {
   remarks: Remark[];
 
-  constructor(private notesService: RemarksListService) {
+  constructor(private remarksListService: RemarksListService) {
   }
 
   ngOnInit() {
-    this.notesService.getNotes().subscribe(remarks => this.remarks = remarks);
+    this.remarksListService.getRemarks().subscribe(remarks => this.remarks = remarks);
   }
 }
