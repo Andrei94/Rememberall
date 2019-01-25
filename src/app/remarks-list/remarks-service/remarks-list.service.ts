@@ -15,7 +15,10 @@ export class RemarksListService {
 
   getRemarks(): Observable<Remark[]> {
     const httpOptions = {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: sessionStorage.getItem('Authorization')
+      })
     };
     return this.http.get(environment.allRemarksUrl, httpOptions)
       .pipe(map((r: any) => r.remarks as Remark[]));

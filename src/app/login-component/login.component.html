@@ -1,0 +1,23 @@
+<div style="min-height: 300px"></div>
+<div class="container container-fluid">
+  <form style="margin: auto">
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="userDetails.username">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="userDetails.password">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="button" class="btn btn-primary btn-block" (click)="checkLogin()">Sign in</button>
+      </div>
+    </div>
+    <div *ngIf="successfulLogin == false" class="text-sm-center col-sm-10 alert bg-danger font-weight-bold text-light">
+      Invalid login
+    </div>
+  </form>
+</div>

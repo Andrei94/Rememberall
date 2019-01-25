@@ -13,7 +13,7 @@ export class RemarksListComponent implements OnInit {
   constructor(private remarksListService: RemarksListService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.remarksListService.getRemarks().subscribe(remarks => this.remarks = remarks);
   }
 }
