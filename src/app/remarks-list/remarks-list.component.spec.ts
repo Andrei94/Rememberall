@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RemarksListComponent } from './remarks-list.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('RemarksListComponent', () => {
   let component: RemarksListComponent;
@@ -8,7 +9,8 @@ describe('RemarksListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RemarksListComponent ]
+      declarations: [ RemarksListComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   }));
@@ -19,10 +21,8 @@ describe('RemarksListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', async(() => {
     expect(component).toBeTruthy();
-  });
-  it('should output 2 elements', () => {
-    expect(component.remarks.length).toBe(2);
-  });
+    expect(component.remarks).toBeUndefined();
+  }));
 });

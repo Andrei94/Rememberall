@@ -9,7 +9,7 @@ import {LoginComponent} from './login-component/login.component';
 import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: 'allRemarks', component: RemarksListComponent},
   {path: 'login', component: LoginComponent},
   {path: '', pathMatch: 'full', redirectTo: 'login'}

@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userDetails = new UserDetails('user', 'password');
+  userDetails: UserDetails = new UserDetails('user', 'password');
   successfulLogin: boolean;
 
   constructor(private loginService: LoginService, private router: Router) { }
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       this.successfulLogin = loginResult;
       if (this.successfulLogin) {
         sessionStorage.setItem('Authorization', 'Basic ' + btoa(this.userDetails.username + ':' + this.userDetails.password));
-        this.router.navigate(['/allRemarks']);
+        this.router.navigateByUrl('/allRemarks');
       }
     });
   }
