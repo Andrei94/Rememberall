@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  allRemarksUrl: ''
+  allRemarksUrl: '',
+  loginUrl: ''
 };
 
 /*

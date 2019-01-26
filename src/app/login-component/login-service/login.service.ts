@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserDetails} from '../user.details';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,6 @@ export class LoginService {
       })
     };
 
-    return this.http.post<boolean>('http://localhost:8080/login', userDetails, httpOptions);
+    return this.http.post<boolean>(environment.loginUrl, userDetails, httpOptions);
   }
 }
